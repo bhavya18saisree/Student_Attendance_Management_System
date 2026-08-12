@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% block title %} Attendance | Dashboard {% endblock %}
+
+{% block maincontent %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    <span class="fs-4">📊</span>
+    <span class="fw-bold">Attendance Management System</span>
+  </a>
+  <div class="ms-auto">
+    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+  </div>
+</nav>
+
+<div class="d-flex justify-content-center mt-4">
+  <div class="bg-info-subtle text-dark px-5 py-3 rounded shadow-sm text-center w-75">
+    <strong>Welcome, {{ teacher_name }}!</strong><br/>
+    You can mark daily attendance, review reports, and manage classes.
+  </div>
+</div>
+
+<div class="d-flex justify-content-center p-4 text-center gap-4 flex-wrap">
+  <div class="card shadow" style="width: 18rem;">
+    <div class="card-body">
+      <div class="mb-3 fs-1">📝</div>
+      <h5 class="card-title">Mark Attendance</h5>
+      <p class="card-text">Record daily attendance for your assigned students.</p>
+      <a href="{% url 'attendance' %}" class="btn btn-primary">Mark Attendance</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width: 18rem;">
+    <div class="card-body">
+      <div class="mb-3 fs-1">📈</div>
+      <h5 class="card-title">View Reports</h5>
+      <p class="card-text">Analyze attendance data and student trends.</p>
+      <a href="{% url 'attendance_report' %}" class="btn btn-success">View Reports</a>
+    </div>
+  </div>
+  <div class="card shadow" style="width: 18rem;">
+    <div class="card-body">
+      <div class="mb-3 fs-1">🏫</div>
+      <h5 class="card-title">Manage Classes</h5>
+      <p class="card-text">Add students and organize batches easily.</p>
+      <a href="{% url 'manage_students' %}" class="btn btn-warning">Manage Classes</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+

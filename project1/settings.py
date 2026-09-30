@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure--xn&2&c2cjou)p@$=u)7k$65+7=o*^mb%h-u^_$kw^*d!8x&@p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = [
+    'student-attendance-management-system-cdl9.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
